@@ -26,3 +26,6 @@ def create_contact(request):
             }
         }, status=201)
     return JsonResponse({"error": "Invalid request"}, status=400)
+
+def health_check(request):
+    return JsonResponse({"status": "ok"})
